@@ -1,0 +1,38 @@
+<div class="my-5">
+    <div class="text-center pt-5">
+        <h1 class="text-center mt-5 color font-weight-bolder text"><i class="fas fa-shopping-cart"></i> : {{count}}</h1>
+    </div>
+
+    <div class="row container m-auto pt-5" *ngIf="cart.length>0 ; else cartShow">
+        <div *ngFor='let product of cart ; index as i' class="mt-3 container m-auto">
+
+            <div class="row container text-center my-5">
+                <div class="col-md-1">
+                    <i (click)="delete(i)" class="far fa-trash-alt delete mt-5"></i>
+                </div>
+                <div class="col-md-4">
+                    <img src={{product.image}} class="w-50 img mt-4" style="height: 200px;">
+                </div>
+                <div class="col-md-4">
+                    <p class="py-2 font-weight-bolder textTitle text-center mt-3">{{product.title}}</p>
+                </div>
+                <div class="col-md-3">
+                    <h1 class="py-2 font-weight-bolder text-danger text-center mt-3">{{product.price |currency}}</h1>
+                </div>
+
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+<ng-template #cartShow>
+    <div class="row container mt-5 pt-5">
+        <div class="col-md-8">
+            <h1 class="text-center py-5"> <br> No Data found , Buy Now Please <i class="fas fa-heart text-danger"></i>
+            </h1>
+        </div>
+        <div class="col-md-4 mt-5">
+            <img src="../../assets/logo.png" class="imgShow">
+        </div>
+    </div>
+</ng-template>

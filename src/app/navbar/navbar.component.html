@@ -1,0 +1,41 @@
+<div class="m-auto text-center">
+    <a class="nav-link links-hover text-white" routerLink="home" > <img src="../../assets/logo.png" /></a>
+</div>
+<section class="bgNav">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+            <div class="btn-group" role="group" *ngIf='!isLogin'>
+                <button id="btnGroupDrop1" type="button" class="btn dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user-circle" style="font-size: 30px; color: white;"></i>
+
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item text-dark" routerLink="Register" href="#">Register</a>
+                    <hr>
+                    <a class="dropdown-item text-dark" routerLink="login" href="#">log in</a>
+                </div>
+            </div>
+            <a class="text-white" *ngIf='isLogin' (click)='isLogout()' href="#"> <i class="fas fa-sign-out-alt"></i> log out</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav m-auto mt-2 mt-lg-0" *ngIf='isLogin'>
+                    <a class="nav-link links-hover text-white" routerLink="allproducts">{{"Products" | translate}}<span
+                            class="sr-only">(current)</span></a>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 " *ngIf='isLogin'>
+                    <a class="nav-link links-hover" routerLinkActive="active" routerLink="favorite"><i
+                            class="fas fa-heart" style="font-size: 30px;"></i></a>
+                    <mat-icon matBadge={{count}} aria-label="icon"><a class="nav-link links-hover text-white"
+                            routerLink="cart"> <i class="fas fa-shopping-cart"></i>
+                        </a></mat-icon>
+                </form>
+            </div>
+        </nav>
+    </div>
+</section>

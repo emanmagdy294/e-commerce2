@@ -1,0 +1,13 @@
+<div class="btn-group" role="group">
+    <button id="btnGroupDrop1" style="position: fixed;" type="button" class="btn color btn-light dropdown-toggle"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-cog"></i>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+        <a (click)="changeCurrentLang('en')" class="dropdown-item" href="#">english</a>
+        <hr>
+        <a (click)="changeCurrentLang('ar')" class="dropdown-item" href="#">arabic</a>
+    </div>
+</div>
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>

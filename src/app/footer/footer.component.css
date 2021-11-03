@@ -1,0 +1,49 @@
+.footer {
+  background-image: url(../../assets/bg-2_1512x.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.textColor {
+  color: #ed6436;
+  font-weight: bolder;
+}
+
+.a {
+  color: black;
+  font-size: 20px;
+  text-align: center;
+}
+
+.icons {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.icons:hover {
+  background-color: #ed6436;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+p {
+  font-size: 20px;
+}
+
+.textHover {
+  color: gray;
+}
+
+.textHover:hover {
+  color: #ed6436;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+/*# sourceMappingURL=footer.component.css.map */

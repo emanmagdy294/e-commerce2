@@ -1,0 +1,34 @@
+<div class="my-5">
+    <div class="text-center pt-5">
+        <p class="text-center mt-5  font-weight-bolder summer text">Your favorite </p>
+    </div>
+    <div class="row container m-auto pt-5">
+        <div class="row container m-auto pt-5" *ngIf="favorite.length>0 ; else cartShow">
+            <div *ngFor='let product of favorite ; index as i' class="mt-3 col-md-4 container m-auto">
+                <div class="food position-relative my-2 pb-3">
+                    <div class="imgPizza m-auto text-center position-relative">
+                        <i (click)="delete(i)" class="fas fa-times-circle iconDelete position-absolute"></i>
+                        <img src={{product.image}} class="w-50 img" style="height: 200px;">
+                    </div>
+                    <div class="p-2">
+                        <p class="text-center star mt-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                        <p class="py-2 font-weight-bolder textTitle text-center">{{product.title}}</p>
+                        <h1 class="py-2 font-weight-bolder text-danger text-center">{{product.price |currency}}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #cartShow>
+    <div class="row container mt-5 pt-5">
+        <div class="col-md-8">
+            <h1 class="text-center py-5"> <br> No Data found <i class="fas fa-heart text-danger"></i>
+            </h1>
+        </div>
+        <div class="col-md-4 mt-5">
+            <img src="../../assets/logo.png" class="imgShow">
+        </div>
+    </div>
+</ng-template>

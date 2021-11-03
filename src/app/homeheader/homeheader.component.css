@@ -1,0 +1,14 @@
+.img:hover {
+  cursor: pointer;
+  -webkit-box-shadow: -5px 2px 54px -9px rgba(75, 75, 75, 0.2);
+          box-shadow: -5px 2px 54px -9px rgba(75, 75, 75, 0.2);
+}
+
+img {
+  border-radius: 15px;
+}
+
+hr {
+  width: 70%;
+}
+/*# sourceMappingURL=homeheader.component.css.map */

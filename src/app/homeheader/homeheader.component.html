@@ -1,0 +1,13 @@
+<section class="my-5">
+    <div class="container">
+        <h1 class="font-weight-bold text-center py-3"><span class="color">Top</span> categories</h1>
+        <owl-carousel-o [options]="customOptions">
+            <ng-container *ngFor="let product of parentData">
+                <ng-template carouselSlide>
+                    <img src={{product.image}} class="w-75 img m-auto text-center" style="height: 200px;">
+                </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+    </div>
+</section>
+<hr class="m-auto container">

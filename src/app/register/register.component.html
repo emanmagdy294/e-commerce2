@@ -1,0 +1,83 @@
+<section class="bgRegister pt-5">
+    <div class="formRegiter  mt-5 m-auto py-5 px-3 example-box" cdkDrag>
+        <div class="text-center">
+            <img src="../../assets/logo.png">
+            <h1 class="py-3 font-weight-bolder">Register</h1>
+            <p class="text-muted">Use your credentials to access your account.</p>
+        </div>
+        <div *ngIf='error' class="pt-2 text-danger">
+            <p>{{error}}</p>
+        </div>
+        <form [formGroup]='registerForm' (ngSubmit)='submitRegisterForm(registerForm)'>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input formControlName='first_name' type="text" placeholder="first-name" id="first_name"
+                            class="form-control">
+                        <div *ngIf="(registerForm).get('first_name')?.errors !=null && (registerForm).get('first_name')?.touched "
+                            class="text-danger my-2">
+                            <p *ngIf="(registerForm).get('first_name')?.errors?.required ">first name is required</p>
+                            <p *ngIf="(registerForm).get('first_name')?.errors?.minlength">first name is minlength 3</p>
+                            <p *ngIf="(registerForm).get('first_name')?.errors?.maxlength ">first name is maxlength 10
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input formControlName='last_name' placeholder=" last Name " type="text" id="last_name"
+                            class="form-control">
+                        <div *ngIf="(registerForm).get('last_name')?.errors !=null && (registerForm).get('last_name')?.touched "
+                            class="text-danger my-2">
+                            <p *ngIf="(registerForm).get('last_name')?.errors?.required ">last name is required</p>
+                            <p *ngIf="(registerForm).get('last_name')?.errors?.minlength">last name is minlength 3</p>
+                            <p *ngIf="(registerForm).get('last_name')?.errors?.maxlength ">last name is maxlength 10</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input formControlName='age' placeholder="Age" type="number" id="age" class="form-control">
+                        <div *ngIf="(registerForm).get('age')?.errors !=null && (registerForm).get('age')?.touched "
+                            class="text-danger">
+                            <p *ngIf="(registerForm).get('age')?.errors?.required ">age is required</p>
+                            <p *ngIf="(registerForm).get('age')?.errors?.min ">age is min 16</p>
+                            <p *ngIf="(registerForm).get('age')?.errors?.max ">age is max 80</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input formControlName='email' placeholder="Email" class="form-control" type="email" name=""
+                            id="email">
+                        <div *ngIf="registerForm.get('email')?.errors !=null && registerForm.get('email')?.touched"
+                            class="text-danger my-2">
+                            <p *ngIf="registerForm.get('email')?.errors?.required">email is required</p>
+                            <p *ngIf="registerForm.get('email')?.errors?.email">email is invalid</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input formControlName='password' placeholder="password" class="form-control" type="password"
+                            name="" id="password">
+                        <div *ngIf="registerForm.get('password')?.errors !=null && registerForm.get('password')?.touched"
+                            class="text-danger my-2">
+                            <p *ngIf="registerForm.get('password')?.errors?.required">password is required</p>
+                            <p *ngIf="registerForm.get('password')?.errors?.pattern">password must start with
+                                uppercase...</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="btn regist w-100" type="submit">Register</button>
+    
+        </form>
+    </div>
+</section>

@@ -1,0 +1,46 @@
+$mainColor:#ed6436;
+
+// footer
+.footer
+{
+    background-image: url(../../assets/bg-2_1512x.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.textColor
+{
+        color:$mainColor;
+        font-weight: bolder;
+}
+.a
+{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+.icons{
+width:50px;
+height: 50px;
+border-radius: 50%;
+background-color: white;
+cursor: pointer;
+transition: .4s;
+}
+.icons:hover {
+background-color: $mainColor;
+cursor: pointer;
+transition: .4s;
+}
+p
+{
+    font-size: 20px;
+}
+.textHover
+{
+    color: gray;
+}
+.textHover:hover{
+color:$mainColor;
+cursor: pointer;
+transition: .4s;
+}

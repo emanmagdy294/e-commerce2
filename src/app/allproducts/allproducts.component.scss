@@ -1,0 +1,53 @@
+
+.textTitle
+{
+    font-size:18px;
+    padding-left: 30px;
+}
+
+.bgSection
+{
+    background-image: url(../../assets/slide22.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+}
+
+.summer{
+    font-size: 80px;
+    font-family: 'Ephesis', cursive;
+    text-transform: capitalize;
+    color: #cf9163;
+    margin: 0 0 20px 0;
+    font-weight: bolder;
+} 
+.btnExplore
+{
+    background: linear-gradient(to right , #f59c7f, #db8e52);
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+.btnHover:hover{
+       background: linear-gradient(to right , #cf9163, #804e27);
+
+}
+
+// favorite
+.fa-heart {
+    color: #ccc;
+    font-size: 25px;
+}
+
+.fa-heart.active {
+    color: #cf9163;
+}
+.fa-heart:hover
+{
+    color: rgb(71, 26, 26);
+}
+.iconHeart
+{
+    margin-left: -90px;
+    margin-top: -10px;
+}

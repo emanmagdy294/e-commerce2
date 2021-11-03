@@ -1,0 +1,47 @@
+<section class="bgRegister py-5">
+    <div class="formRegiter mt-5 m-auto py-5 px-3 example-box" cdkDrag>
+        <div class="text-center">
+            <img src="../../assets/logo.png">
+            <h1 class="py-3 font-weight-bolder">Log In</h1>
+            <p class="text-muted">Use your credentials to access your account.</p>
+        </div>
+        <div >
+            <div class="p-2 bgRegester">
+                <div class="text-center">
+                    <div>
+                        <div *ngIf='error' class="pt-2 alert alert-danger">
+                            <p>{{error}}</p>
+                        </div>
+                        <form [formGroup]='loginForm' (ngSubmit)='submitloginForm(loginForm)' class="w-75 pt-3 m-auto">
+
+                            <div class="form-group">
+                                <input formControlName='email' placeholder="email" class="form-control" type="email"
+                                    name="" id="email">
+                                <div *ngIf="loginForm.get('email')?.errors !=null && loginForm.get('email')?.touched"
+                                    class="alert text-danger my-2">
+                                    <p *ngIf="loginForm.get('email')?.errors?.required">email is required</p>
+                                    <p *ngIf="loginForm.get('email')?.errors?.email">email is invalid</p>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <input formControlName='password' placeholder="password" class="form-control"
+                                    type="password" name="" id="password">
+                                <div *ngIf="loginForm.get('password')?.errors !=null && loginForm.get('password')?.touched"
+                                    class="alert  text-danger my-2">
+                                    <p *ngIf="loginForm.get('password')?.errors?.required">password is required</p>
+                                    <p *ngIf="loginForm.get('password')?.errors?.pattern">password must start with
+                                        uppercase...</p>
+                                </div>
+                            </div>
+
+                            <button class="btn regist w-100" type="submit">LOG IN </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

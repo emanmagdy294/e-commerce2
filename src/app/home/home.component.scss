@@ -1,0 +1,78 @@
+
+$mainColor:#ed6436;
+.bgSection
+{
+    background-image: url(../../assets/slide21.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+}
+.caption
+{
+    padding-top: 10%;
+}
+.btnExplore
+{
+    background: linear-gradient(to right , #f59c7f, $mainColor);
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+.textTitle
+{
+    font-size:18px;
+    padding-left: 30px;
+}
+.img:hover
+{
+ cursor: pointer;
+}
+
+.summer{
+    font-size: 80px;
+    font-family: 'Ephesis', cursive;
+    text-transform: capitalize;
+    color: #cf9163;
+    margin: 0 0 20px 0;
+    font-weight: bolder;
+}
+
+.about{
+    background-color: rgb(216, 214, 214);
+}
+.btnHover:hover{
+       background: linear-gradient(to right , #cf9163, #804e27);
+
+}
+// imgOwlCarousel
+
+
+.imgOwlCarousel:hover{
+    box-shadow: -5px 2px 54px -9px rgba(75, 75, 75, 0.1);
+    cursor: pointer;
+}
+// favorite
+.fa-heart {
+    color: #ccc;
+    font-size: 25px;
+}
+
+.fa-heart.active {
+    color: #cf9163;
+}
+.fa-heart:hover
+{
+    color: rgb(71, 26, 26);
+}
+.iconHeart
+{
+    margin-left: -90px;
+    margin-top: -10px;
+}
+
+.food
+{
+    background-color: white;
+    box-shadow: 5px 5px 7px rgb(33 33 33 / 80%);
+    border-radius: 8px;
+}
